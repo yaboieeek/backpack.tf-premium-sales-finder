@@ -24,5 +24,6 @@
 - When an inventory page is loaded with a special compare link, the nearest dates will be selected.
 
 ### Eeek modifications: 
+Premium search page modifications: 
 - Added toggler for filtering out items without sales.
 - Toggler also filters out items, that had no sales within 3 months
