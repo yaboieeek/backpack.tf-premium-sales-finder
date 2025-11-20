@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        backpack.tf Premium Recent Sales Finder + indate sales toggler
 // @namespace   http://steamcommunity.com/profiles/76561198080179568/ and https://steamcommunity.com/profiles/76561198967088046
-// @version     4.1.1.fork.1
+// @version     4.1.1.fork.2
 // @description Adds coloring to history pages indicating recent sales and includes compare links for sales + adds sales toggler
 // @author      Julia and eeek
 // @updateURL   https://github.com/yaboieeek/backpack.tf-premium-sales-finder/raw/master/backpacktf-premium-sales-finder.meta.js
@@ -55,6 +55,7 @@ class UIController {
         button.type = 'button';
 
         button.innerText = this._getButtonText();
+        button.title = this._getButtonTitle();
 
         this._changeButtonColorScheme(button);
 
@@ -66,7 +67,7 @@ class UIController {
 
     _getButtonText() {
         return this.buttonState === buttonStates.all ?
-            'Mode: all items' : 'Mode: sales only';
+            'Mode: all items' : 'Mode: valid sales only';
     }
 
     _changeButtonState(){
@@ -76,6 +77,15 @@ class UIController {
 
     _changeButtonText(button) {
         button.innerText = this._getButtonText()
+    }
+
+    _changeButtonTitle(button) {
+        button.title = this._getButtonTitle()
+    }
+
+    _getButtonTitle() {
+        return this.buttonState === buttonStates.all ?
+            'Currently showing raw items data' : 'Only showing items, that had a sale within 3 months'
     }
 
     _changeButtonColorScheme(button) {
@@ -95,7 +105,7 @@ class UIController {
 
     _toggleItemsVisibility() {
         this.itemsList
-            .filter(e => [...e.classList].filter(c => c !== 'hidden').length === 1)
+            .filter(e => [...e.classList].filter(c => !['hidden', 'danger'].includes(c)).length === 1)
             .forEach(e => {
             if (this.buttonState === buttonStates.all) {
                 e.classList.remove('hidden')
@@ -109,7 +119,8 @@ class UIController {
         this._changeButtonState();
         this._toggleItemsVisibility();
         this._changeButtonText(button);
-        this._changeButtonColorScheme(button)
+        this._changeButtonTitle(button);
+        this._changeButtonColorScheme(button);
     }
 }
 
