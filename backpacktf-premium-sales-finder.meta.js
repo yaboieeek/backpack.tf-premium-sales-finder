@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        backpack.tf Premium Recent Sales Finder + indate sales toggler
 // @namespace   http://steamcommunity.com/profiles/76561198080179568/ and https://steamcommunity.com/profiles/76561198967088046
-// @version     4.1.1.fork.1
+// @version     4.1.1.fork.2
 // @description Adds coloring to history pages indicating recent sales and includes compare links for sales + adds sales toggler
 // @author      Julia and eeek
 // @updateURL   https://github.com/yaboieeek/backpack.tf-premium-sales-finder/raw/master/backpacktf-premium-sales-finder.meta.js
