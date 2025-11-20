@@ -17,6 +17,9 @@
 - Compare links for sales.
 - Link to bot.tf listing snapshots.
 
+#### Eeek modifications: 
+- Added toggler for filtering out items without sales.
+
 ### ```https://backpack.tf/premium/search```
 - Row highlighting indicating recent sales.
 
