@@ -17,12 +17,12 @@
 - Compare links for sales.
 - Link to bot.tf listing snapshots.
 
-#### Eeek modifications: 
-- Added toggler for filtering out items without sales.
-- Toggler also filters out items, that had no sales within 3 months
-
 ### ```https://backpack.tf/premium/search```
 - Row highlighting indicating recent sales.
 
 ### ```https://backpack.tf/profiles/<steamid>```
 - When an inventory page is loaded with a special compare link, the nearest dates will be selected.
+
+### Eeek modifications: 
+- Added toggler for filtering out items without sales.
+- Toggler also filters out items, that had no sales within 3 months
